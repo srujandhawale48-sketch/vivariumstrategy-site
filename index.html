@@ -3,21 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VIVARIUM STRATEGY | Corporate Turnaround & Strategy</title>
     
-    <!-- Google Fonts: Playfair Display & Inter -->
+    <title>VIVARIUM STRATEGY | Corporate Turnaround & Strategy</title>
+    <meta name="description" content="Vivarium Strategy is a proprietary consulting firm for Anti-Fragility. We architect legacy through corporate turnaround, operational excellence, and risk architecture.">
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Vivarium Strategy",
+      "url": "https://vivariumstrategy.in/"
+    }
+    </script>
+
+    <link rel="icon" type="image/jpeg" href="vivarium logo.jpeg">
+
+    <meta property="og:title" content="VIVARIUM STRATEGY | We Architect Legacy">
+    <meta property="og:description" content="Proprietary consulting for Anti-Fragility. Architecting legacy through institutional-grade system design.">
+    <meta property="og:image" content="vivarium logo.jpeg">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.vivariumstrategy.in/">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- THE BLACK CARD AESTHETIC --- */
         :root {
-            --bg-color: #121212;        /* Deep Charcoal */
-            --card-bg: #1e1e1e;         /* Lighter Grey */
-            --text-main: #e0e0e0;       /* Off-White */
-            --text-muted: #a0a0a0;      /* Muted Grey */
-            --accent: #ff6b00;          /* Electric Orange */
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent: #ff6b00;
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
@@ -30,15 +47,10 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3 {
-            font-family: 'Playfair Display', serif;
-            color: white;
-        }
-
+        h1, h2, h3 { font-family: 'Playfair Display', serif; color: white; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
         ul { list-style: none; }
 
-        /* --- NAVIGATION --- */
         nav {
             display: flex;
             justify-content: space-between;
@@ -53,29 +65,12 @@
             border-bottom: 1px solid #333;
         }
 
-        .logo {
-            font-size: 1.2rem;
-            font-weight: 700;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
         .logo span { color: var(--accent); }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            font-size: 0.9rem;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
+        .nav-links { display: flex; gap: 2rem; }
+        .nav-links a { font-size: 0.9rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
         .nav-links a:hover { color: var(--accent); }
 
-        /* --- HERO SECTION --- */
         .hero {
             height: 90vh;
             display: flex;
@@ -87,12 +82,7 @@
             padding-top: 80px;
         }
 
-        .hero h1 {
-            font-size: 4rem;
-            line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
+        .hero h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 1.5rem; }
         .hero p {
             font-size: 1.2rem;
             color: var(--text-muted);
@@ -115,102 +105,31 @@
             transition: 0.3s;
         }
 
-        .btn:hover {
-            background: var(--accent);
-            color: white;
-        }
+        .btn:hover { background: var(--accent); color: white; }
 
-        /* --- SECTIONS COMMON --- */
-        .section {
-            padding: 6rem 5%;
-            max-width: 1200px;
-            margin: 0 auto;
-            border-top: 1px solid #222;
-        }
+        .section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; border-top: 1px solid #222; }
+        .section-title { font-size: 2.5rem; margin-bottom: 3rem; position: relative; }
 
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            position: relative;
-        }
-
-        /* --- ABOUT US --- */
-        .about-content {
-            display: flex;
-            gap: 4rem;
-            align-items: flex-start;
-        }
+        .about-content { display: flex; gap: 4rem; align-items: flex-start; }
         .about-text { flex: 1; }
         .about-text p { margin-bottom: 1.5rem; color: var(--text-muted); }
 
-        /* --- SERVICES (ETHICAL & GENERIC) --- */
-        .services-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-
-        .service-card {
-            background: var(--card-bg);
-            padding: 2.5rem;
-            border: 1px solid #333;
-            transition: 0.3s;
-        }
-
-        .service-card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
-        }
-
+        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
+        .service-card { background: var(--card-bg); padding: 2.5rem; border: 1px solid #333; transition: 0.3s; }
+        .service-card:hover { border-color: var(--accent); transform: translateY(-5px); }
         .service-card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
         .service-card p { font-size: 0.95rem; color: var(--text-muted); }
 
-        /* --- CONTACT US FORM --- */
-        .contact-container {
-            display: flex;
-            gap: 4rem;
-            flex-wrap: wrap;
-        }
-
+        .contact-container { display: flex; gap: 4rem; flex-wrap: wrap; }
         .contact-info { flex: 1; }
         .contact-form-box { flex: 1; }
-
         .form-group { margin-bottom: 1.5rem; }
-        
-        .form-group label {
-            display: block;
-            font-size: 0.8rem;
-            margin-bottom: 0.5rem;
-            color: var(--text-muted);
-            text-transform: uppercase;
-        }
+        .form-group label { display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-muted); text-transform: uppercase; }
+        .form-input, textarea { width: 100%; padding: 1rem; background: #111; border: 1px solid #333; color: white; font-family: 'Inter', sans-serif; resize: none; }
+        .form-input:focus, textarea:focus { outline: none; border-color: var(--accent); }
 
-        .form-input, textarea {
-            width: 100%;
-            padding: 1rem;
-            background: #111;
-            border: 1px solid #333;
-            color: white;
-            font-family: 'Inter', sans-serif;
-            resize: none;
-        }
+        footer { text-align: center; padding: 3rem; border-top: 1px solid #333; color: var(--text-muted); font-size: 0.9rem; background: #0a0a0a; }
 
-        .form-input:focus, textarea:focus {
-            outline: none;
-            border-color: var(--accent);
-        }
-
-        /* --- FOOTER --- */
-        footer {
-            text-align: center;
-            padding: 3rem;
-            border-top: 1px solid #333;
-            color: var(--text-muted);
-            font-size: 0.9rem;
-            background: #0a0a0a;
-        }
-
-        /* --- MOBILE --- */
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
@@ -220,7 +139,6 @@
 </head>
 <body>
 
-    <!-- NAVIGATION BAR -->
     <nav>
         <div class="logo">VIVARIUM <span>STRATEGY</span></div>
         <ul class="nav-links">
@@ -231,14 +149,12 @@
         </ul>
     </nav>
 
-    <!-- HOME SECTION -->
     <section id="home" class="hero">
         <h1>WE DO NOT SELL HOURS.<br>WE ARCHITECT <span style="color:var(--accent)">LEGACY.</span></h1>
         <p>The proprietary consulting firm for Anti-Fragility. We turn volatility into asymmetric growth through institutional-grade system design.</p>
         <a href="#contact" class="btn">Apply for Engagement</a>
     </section>
 
-    <!-- ABOUT SECTION -->
     <section id="about" class="section">
         <h2 class="section-title">ABOUT THE FIRM</h2>
         <div class="about-content">
@@ -250,7 +166,6 @@
         </div>
     </section>
 
-    <!-- SERVICES SECTION (RENAMED) -->
     <section id="services" class="section">
         <h2 class="section-title">THE ARSENAL (SERVICES)</h2>
         <div class="services-grid">
@@ -269,7 +184,6 @@
         </div>
     </section>
 
-    <!-- CONTACT SECTION (LIVE FORM) -->
     <section id="contact" class="section">
         <h2 class="section-title">CONTACT US</h2>
         <div class="contact-container">
@@ -278,17 +192,14 @@
                 <p>We accept fewer than 5% of inbound inquiries. Please provide details regarding your strategic requirements.</p>
                 <br>
                 <p><strong>Office:</strong> Nashik, India</p>
-                <p><strong>Email:</strong> vivariumstrategy@gmail.com</p>
+                <p><strong>Email:</strong> office@vivariumstrategy.in</p>
             </div>
             
             <div class="contact-form-box">
-                <!-- FORM ENGINE START: EMAIL CONFIGURED -->
                 <form action="https://formsubmit.co/vivariumstrategy@gmail.com" method="POST">
-                    
-                    <!-- Hidden Configurations -->
                     <input type="hidden" name="_subject" value="New Vivarium Client Application">
                     <input type="hidden" name="_captcha" value="false">
-                    <input type="hidden" name="_next" value="https://vivariumstrategy.in"> 
+                    <input type="hidden" name="_next" value="https://www.vivariumstrategy.in/"> 
                     
                     <div class="form-group">
                         <label>Name</label>
@@ -304,12 +215,10 @@
                     </div>
                     <button type="submit" class="btn">Submit Application</button>
                 </form>
-                <!-- FORM ENGINE END -->
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
     <footer>
         <p>&copy; 2025 VIVARIUM STRATEGY. All Rights Reserved.</p>
         <p>Strategic Governance Protocols Active.</p>
@@ -317,4 +226,3 @@
 
 </body>
 </html>
-
