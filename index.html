@@ -5,51 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <!-- PRIMARY SEO -->
-    <title>VIVARIUM STRATEGY | Corporate Turnaround & Strategy</title>
+    <title>VIVARIUM STRATEGY | We Architect Legacy</title>
     <meta name="description" content="Vivarium Strategy is a proprietary consulting firm for Anti-Fragility. We architect legacy through corporate turnaround, operational excellence, and risk architecture.">
     <meta name="author" content="Srujan Dhawale">
     <link rel="canonical" href="https://vivariumstrategy.in/">
 
-    <!-- GOOGLE BRANDING & SCHEMA (Fixes Name/Logo in Search) -->
-    <meta name="application-name" content="Vivarium Strategy">
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "Vivarium Strategy",
-      "alternateName": "Vivarium",
-      "url": "https://vivariumstrategy.in/",
-      "logo": "https://vivariumstrategy.in/Logo.jpeg",
-      "founder": {
-        "@type": "Person",
-        "name": "Srujan Dhawale"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "email": "office@vivariumstrategy.in",
-        "contactType": "strategic inquiries"
-      }
-    }
-    </script>
-
-    <!-- FAVICON -->
-    <link rel="icon" type="image/jpeg" href="Logo.jpeg">
-    <link rel="apple-touch-icon" href="Logo.jpeg">
-
-    <!-- SOCIAL MEDIA PREVIEW (LinkedIn/WhatsApp) -->
-    <meta property="og:title" content="VIVARIUM STRATEGY | We Architect Legacy">
-    <meta property="og:description" content="Proprietary consulting for Anti-Fragility. Architecting legacy through institutional-grade system design.">
-    <meta property="og:image" content="https://vivariumstrategy.in/Logo.jpeg">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://vivariumstrategy.in/">
-    <meta property="og:site_name" content="Vivarium Strategy">
-
-    <!-- TYPOGRAPHY -->
+    <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&family=Space+Mono&display=swap" rel="stylesheet">
 
     <style>
+        /* --- GLOBAL STYLES --- */
         :root {
             --bg-color: #121212;
             --card-bg: #1e1e1e;
@@ -58,40 +25,24 @@
             --accent: #ff6b00;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
-
-        body {
-            background-color: var(--bg-color);
-            color: var(--text-main);
-            font-family: 'Inter', sans-serif;
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: white; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
-        ul { list-style: none; }
 
+        /* NAVIGATION */
         nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 1.5rem 5%;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            background: rgba(18, 18, 18, 0.95);
-            backdrop-filter: blur(10px);
-            z-index: 100;
-            border-bottom: 1px solid #333;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 1.5rem 5%; background: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333; position: sticky; top: 0; z-index: 100;
         }
-
         .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
         .logo span { color: var(--accent); }
-        .nav-links { display: flex; gap: 2rem; }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
         .nav-links a { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
         .nav-links a:hover { color: var(--accent); }
 
+        /* HERO SECTION */
         .hero {
             min-height: 90vh;
             display: flex;
@@ -100,10 +51,9 @@
             padding: 0 5%;
             max-width: 1200px;
             margin: 0 auto;
-            padding-top: 120px;
+            padding-top: 80px;
         }
-
-        .hero h1 { font-size: clamp(2.5rem, 8vw, 4rem); line-height: 1.1; margin-bottom: 1.5rem; }
+        .hero h1 { font-size: clamp(3rem, 8vw, 5rem); line-height: 1.1; margin-bottom: 1.5rem; }
         .hero p {
             font-size: 1.2rem;
             color: var(--text-muted);
@@ -113,143 +63,139 @@
             padding-left: 1.5rem;
         }
 
+        /* BUTTONS */
         .btn {
-            display: inline-block;
-            padding: 1rem 2.5rem;
-            background: transparent;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            font-weight: 600;
-            letter-spacing: 1px;
-            text-transform: uppercase;
-            cursor: pointer;
-            transition: 0.3s;
-            text-align: center;
+            display: inline-block; padding: 1rem 2.5rem; border: 1px solid var(--accent);
+            color: var(--accent); font-weight: 600; letter-spacing: 1px; text-transform: uppercase;
+            transition: 0.3s; cursor: pointer;
         }
-
         .btn:hover { background: var(--accent); color: white; }
+        
+        .btn-text {
+            color: #fff; font-size: 0.9rem; border-bottom: 1px solid var(--accent); padding-bottom: 2px;
+        }
+        .btn-text:hover { color: var(--accent); }
 
+        /* SECTIONS */
         .section { padding: 6rem 5%; max-width: 1200px; margin: 0 auto; border-top: 1px solid #222; }
-        .section-title { font-size: 2.5rem; margin-bottom: 3rem; position: relative; }
+        .section-header { display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem; }
+        .section-title { font-size: 2rem; }
+        
+        /* HIGHLIGHT CARD (Project Sovereign) */
+        .highlight-card {
+            background: #0a0a0a;
+            border: 1px solid #333;
+            padding: 3rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .highlight-card:hover { border-color: var(--accent); }
+        .highlight-content h3 { font-size: 2rem; margin-bottom: 1rem; }
+        .highlight-meta { font-family: 'Space Mono', monospace; color: var(--accent); font-size: 0.8rem; margin-bottom: 1rem; display: block; }
 
-        .about-content { display: flex; gap: 4rem; align-items: flex-start; }
-        .about-text { flex: 1; }
-        .about-text p { margin-bottom: 1.5rem; color: var(--text-muted); }
+        /* SERVICES TEASER */
+        .services-teaser { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; }
+        .teaser-item h3 { font-size: 1.4rem; margin-bottom: 0.5rem; color: #fff; }
+        .teaser-item p { font-size: 0.9rem; color: var(--text-muted); margin-bottom: 1rem; }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; }
-        .service-card { background: var(--card-bg); padding: 2.5rem; border: 1px solid #333; transition: 0.3s; }
-        .service-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .service-card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
-        .service-card p { font-size: 0.95rem; color: var(--text-muted); }
+        /* FIRM TEASER */
+        .firm-teaser { text-align: center; padding: 6rem 5%; background: #0a0a0a; }
+        .firm-teaser h2 { font-size: 2.5rem; margin-bottom: 1.5rem; }
+        .firm-teaser p { max-width: 700px; margin: 0 auto 2rem; color: var(--text-muted); font-size: 1.1rem; }
 
-        .contact-container { display: flex; gap: 4rem; flex-wrap: wrap; }
-        .contact-info { flex: 1; min-width: 300px; }
-        .contact-form-box { flex: 1; min-width: 300px; }
-        .form-group { margin-bottom: 1.5rem; }
-        .form-group label { display: block; font-size: 0.8rem; margin-bottom: 0.5rem; color: var(--text-muted); text-transform: uppercase; }
-        .form-input, textarea { width: 100%; padding: 1rem; background: #111; border: 1px solid #333; color: white; font-family: 'Inter', sans-serif; resize: none; border-radius: 0; }
-        .form-input:focus, textarea:focus { outline: none; border-color: var(--accent); }
-
-        footer { text-align: center; padding: 3rem; border-top: 1px solid #333; color: var(--text-muted); font-size: 0.8rem; background: #0a0a0a; }
+        /* FOOTER */
+        footer { text-align: center; padding: 3rem; border-top: 1px solid #333; color: var(--text-muted); font-size: 0.8rem; background: #050505; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
             .nav-links { display: none; }
-            .about-content, .contact-container { flex-direction: column; gap: 2rem; }
-            .section { padding: 4rem 5%; }
+            .highlight-card { flex-direction: column; align-items: flex-start; gap: 2rem; }
+            .section-header { flex-direction: column; align-items: flex-start; gap: 1rem; }
         }
     </style>
 </head>
 <body>
 
+    <!-- NAVIGATION -->
     <nav>
         <div class="logo">VIVARIUM <span>STRATEGY</span></div>
         <ul class="nav-links">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Firm</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="index.html" style="color:var(--accent);">Home</a></li> <!-- Active -->
+            <li><a href="about.html">The Firm</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
         </ul>
     </nav>
 
-    <main>
-        <section id="home" class="hero">
-            <h1>WE DO NOT SELL HOURS.<br>WE ARCHITECT <span style="color:var(--accent)">LEGACY.</span></h1>
-            <p>The proprietary consulting firm for Anti-Fragility. We turn volatility into asymmetric growth through institutional-grade system design.</p>
-            <a href="#contact" class="btn">Apply for Engagement</a>
-        </section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <h1>WE DO NOT SELL HOURS.<br>WE ARCHITECT <span style="color:var(--accent)">LEGACY.</span></h1>
+        <p>The proprietary consulting firm for Anti-Fragility. We turn volatility into asymmetric growth through institutional-grade system design.</p>
+        <div>
+            <a href="services.html" class="btn">Explore Capabilities</a>
+        </div>
+    </section>
 
-        <section id="about" class="section">
-            <h2 class="section-title">ABOUT THE FIRM</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>VIVARIUM STRATEGY was founded on a singular mandate: to reject the "Mercenary Model" of consulting. We operate on the doctrine of Ethical Supremacy, prioritizing long-term client resilience over short-term fee extraction.</p>
-                    <p>Led by Srujan Dhawale, the firm leverages proprietary frameworks derived from rigorous operational audits and risk architecture. We do not provide generic advice; we provide "Survival Currency" for organizations facing existential or strategic pivot points.</p>
-                    <p>We are not purveyors of reports; we are custodians of value creation.</p>
-                </div>
+    <!-- LATEST INTEL (Project Sovereign Highlight) -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">LATEST INTELLIGENCE</h2>
+            <a href="insights.html" class="btn-text">View All Mandates -></a>
+        </div>
+        
+        <div class="highlight-card">
+            <div class="highlight-content">
+                <span class="highlight-meta">MARKET VALIDATED | DEEP TECH</span>
+                <h3>Project Sovereign: The MapmyIndia Arbitrage</h3>
+                <p style="color:var(--text-muted); max-width: 600px;">
+                    An institutional-grade valuation thesis identifying an event-driven catalyst (B2C Spinoff). 
+                    <br><strong>Entry: ₹1,700 | Market: ₹1,725+ | Status: Validated.</strong>
+                </p>
             </div>
-        </section>
-
-        <section id="services" class="section">
-            <h2 class="section-title"> "Strategic Capabilities"</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <h3>01. The Operational Blueprint</h3>
-                    <p>Advanced Optimization framework for large-scale manufacturing environments. We convert inefficiency into pure margin through constraint analysis.</p>
-                </div>
-                <div class="service-card">
-                    <h3>02. The Transactional Protocol</h3>
-                    <p>Risk Architecture for high-stakes Private Equity and M&A scenarios. We prioritize governance, speed-to-exit, and value creation.</p>
-                </div>
-                <div class="service-card">
-                    <h3>03. The Survival Mechanism</h3>
-                    <p>Corporate Turnaround protocols for existential threat scenarios. When the runway ends, we architect a new airport.</p>
-                </div>
+            <div>
+                <a href="insights.html" class="btn">Read Brief</a>
             </div>
-        </section>
+        </div>
+    </section>
 
-        <section id="contact" class="section">
-            <h2 class="section-title">CONTACT US</h2>
-            <div class="contact-container">
-                <div class="contact-info">
-                    <h3 style="margin-bottom:1rem;">Apply for Engagement</h3>
-                    <p>"Engagement by Invitation or Referral Only.". Please provide details regarding your strategic requirements.</p>
-                    <br>
-                    <p><strong>Office:</strong>"Registered Office: Nashik, India | Operations: Pan-India" </p>
-                    <p><strong>Email:</strong> office@vivariumstrategy.in</p>
-                </div>
-                
-                <div class="contact-form-box">
-                    <!-- FormSubmit used for back-end processing -->
-                    <form action="https://formsubmit.co/vivariumstrategy@gmail.com" method="POST">
-                        <input type="hidden" name="_subject" value="New Vivarium Client Application">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="https://vivariumstrategy.in/"> 
-                        
-                        <div class="form-group">
-                            <label>Name</label>
-                            <input type="text" name="name" class="form-input" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Corporate Entity</label>
-                            <input type="text" name="company" class="form-input" placeholder="Company Name" required>
-                        </div>
-                        <div class="form-group">
-                            <label>Strategic Requirement</label>
-                            <textarea name="message" class="form-input" rows="4" placeholder="Brief description of the challenge" required></textarea>
-                        </div>
-                        <button type="submit" class="btn">Submit Application</button>
-                    </form>
-                </div>
+    <!-- SERVICES TEASER -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">CORE CAPABILITIES</h2>
+            <a href="services.html" class="btn-text">View Full Arsenal -></a>
+        </div>
+        <div class="services-teaser">
+            <div class="teaser-item">
+                <h3>01. Operational Blueprint</h3>
+                <p>Constraint Analysis for manufacturing throughput optimization. (Proven at Gabriel India).</p>
             </div>
-        </section>
-    </main>
+            <div class="teaser-item">
+                <h3>02. Transactional Protocol</h3>
+                <p>Buy-side due diligence and valuation for Private Equity & VC.</p>
+            </div>
+            <div class="teaser-item">
+                <h3>03. Survival Mechanism</h3>
+                <p>Corporate Turnaround protocols for existential threat scenarios.</p>
+            </div>
+        </div>
+    </section>
 
+    <!-- FIRM TEASER -->
+    <section class="firm-teaser">
+        <h2>ETHICAL SUPREMACY</h2>
+        <p>Vivarium Strategy rejects the "Mercenary Model." We are custodians of value creation, operating on a doctrine of Anti-Fragility and scarcity.</p>
+        <a href="about.html" class="btn">Read Our Ethos</a>
+    </section>
+
+    <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 VIVARIUM STRATEGY. All Rights Reserved.</p>
-        <p style="margin-top: 5px; opacity: 0.7;">Strategic Governance Protocols Active.</p>
+        <div class="logo" style="margin-bottom: 20px;">VIVARIUM <span>STRATEGY</span></div>
+        <p>&copy; 2026 VIVARIUM STRATEGY. All Rights Reserved.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">Registered Office: Nashik | Operations: Pan-India</p>
+        <p style="margin-top: 5px; opacity: 0.7; font-size: 0.7rem;">A Registered MSME Enterprise.</p>
     </footer>
 
 </body>
 </html>
-
