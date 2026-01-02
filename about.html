@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>THE FIRM | Vivarium Strategy</title>
+    <meta name="description" content="The Ethos and Leadership of Vivarium Strategy. We operate on the doctrine of Ethical Supremacy and Anti-Fragility.">
+    
+    <!-- FONTS & STYLES (Same as Home Page) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --text-main: #e0e0e0;
+            --text-muted: #a0a0a0;
+            --accent: #ff6b00; /* International Orange */
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+        }
+
+        h1, h2, h3, h4 { font-family: 'Playfair Display', serif; color: white; }
+        a { text-decoration: none; color: inherit; transition: 0.3s; }
+        
+        /* NAVIGATION */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1.5rem 5%;
+            background: rgba(18, 18, 18, 0.95);
+            border-bottom: 1px solid #333;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        .logo { font-size: 1.2rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; }
+        .logo span { color: var(--accent); }
+        .nav-links { display: flex; gap: 2rem; list-style: none; }
+        .nav-links a { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+        .nav-links a:hover { color: var(--accent); }
+
+        /* HEADER SECTION */
+        .page-header {
+            padding: 8rem 5% 4rem;
+            text-align: center;
+            border-bottom: 1px solid #222;
+        }
+        .page-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
+        .page-header p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; }
+
+        /* CORE AXIOM (Highlight Box) */
+        .axiom-section {
+            padding: 4rem 5%;
+            background-color: #0a0a0a;
+            border-bottom: 1px solid #222;
+            text-align: center;
+        }
+        .axiom-box {
+            border: 1px solid var(--accent);
+            padding: 3rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        .axiom-box h3 { font-size: 1.8rem; font-style: italic; color: var(--text-main); font-weight: 400; }
+        .axiom-label { color: var(--accent); font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase; margin-bottom: 1rem; display: block; font-weight: bold; }
+
+        /* LEADERSHIP SECTION */
+        .leadership-section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            gap: 4rem;
+            align-items: center;
+            border-bottom: 1px solid #222;
+        }
+        .leader-img {
+            flex: 1;
+            min-width: 300px;
+        }
+        .leader-img img {
+            width: 100%;
+            border: 1px solid #333;
+            filter: grayscale(100%); /* Makes photo Black & White for pro look */
+            transition: 0.5s;
+        }
+        .leader-img img:hover { filter: grayscale(0%); }
+        
+        .leader-info { flex: 1.5; }
+        .leader-info h2 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+        .leader-title { color: var(--accent); font-size: 1rem; margin-bottom: 2rem; display: block; text-transform: uppercase; letter-spacing: 1px; }
+        .leader-bio p { margin-bottom: 1.5rem; color: var(--text-muted); font-size: 1.05rem; }
+
+        /* ETHOS GRID */
+        .ethos-section {
+            padding: 6rem 5%;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .section-title { text-align: center; font-size: 2.5rem; margin-bottom: 4rem; }
+        
+        .ethos-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .ethos-card {
+            background: var(--card-bg);
+            padding: 2.5rem;
+            border: 1px solid #333;
+            transition: 0.3s;
+        }
+        .ethos-card:hover { border-color: var(--accent); transform: translateY(-5px); }
+        .card-num { color: var(--accent); font-family: 'Playfair Display', serif; font-size: 1.5rem; margin-bottom: 1rem; display: block; }
+        .ethos-card h3 { font-size: 1.4rem; margin-bottom: 1rem; }
+        .ethos-card p { font-size: 0.95rem; color: var(--text-muted); }
+
+        /* ROI BANNER */
+        .roi-banner {
+            background: var(--accent);
+            color: #000;
+            text-align: center;
+            padding: 4rem 5%;
+        }
+        .roi-banner h2 { color: #000; font-size: 2.5rem; margin-bottom: 1rem; }
+        .roi-banner p { font-size: 1.2rem; font-weight: 600; max-width: 800px; margin: 0 auto; }
+
+        /* FOOTER */
+        footer { text-align: center; padding: 3rem; border-top: 1px solid #333; color: var(--text-muted); font-size: 0.8rem; background: #0a0a0a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; } /* Mobile Menu implementation needed later */
+            .leadership-section { flex-direction: column; }
+            .page-header h1 { font-size: 2.5rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <nav>
+        <div class="logo">VIVARIUM <span>STRATEGY</span></div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html" style="color:var(--accent);">The Firm</a></li> <!-- Active State -->
+            <li><a href="services.html">Services</a></li>
+            <li><a href="insights.html">Insights</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1>THE STRATEGIC DOCTRINE</h1>
+        <p>Vivarium Strategy is not a service provider. We are an institutional philosophy designed to engineer asymmetry in a linear world.</p>
+    </header>
+
+    <!-- CORE AXIOM -->
+    <section class="axiom-section">
+        <div class="axiom-box">
+            <span class="axiom-label">The Core Axiom</span>
+            <h3>"We are not purveyors of reports or hours; we are custodians of value creation. Our operational existence is predicated on a singular commitment: Client Legacy."</h3>
+        </div>
+    </section>
+
+    <!-- ETHOS GRID (From your Document) -->
+    <section class="ethos-section">
+        <h2 class="section-title">OUR CONSTITUTION</h2>
+        <div class="ethos-grid">
+            
+            <div class="ethos-card">
+                <span class="card-num">01.</span>
+                <h3>The Doctrine of Anti-Fragility</h3>
+                <p>We reject the fragility of resilience (returning to baseline). We build systems that gain advantage from disorder, volatility, and stress events. We do not just endure shock; we monetize it.</p>
+            </div>
+
+            <div class="ethos-card">
+                <span class="card-num">02.</span>
+                <h3>Rejection of Prediction</h3>
+                <p>Vivarium Strategy does not invest intellectual capital in predictive models. We convert the unknowable into an opportunity for asymmetric growth by minimizing downside risk while maximizing exposure to positive volatility.</p>
+            </div>
+
+            <div class="ethos-card">
+                <span class="card-num">03.</span>
+                <h3>Ethical Supremacy</h3>
+                <p><strong>The Illicit Capital Exclusion Protocol:</strong> We maintain a strict prohibition against engagement with capital sources deemed "toxic." We prioritize the source of the capital over the volume of the fee.</p>
+            </div>
+
+            <div class="ethos-card">
+                <span class="card-num">04.</span>
+                <h3>The Non-Linearity Clause</h3>
+                <p>We reject linear, incremental growth as insufficient. Our methodologies are engineered to identify and exploit convex payoff structures, ensuring outcomes are disproportionately large relative to input.</p>
+            </div>
+
+            <div class="ethos-card">
+                <span class="card-num">05.</span>
+                <h3>The Doctrine of Scarcity</h3>
+                <p>We accept fewer than 5% of inbound inquiries. We do not seek to maximize market share; we seek to maximize the quality of impact within a hyper-selected portfolio.</p>
+            </div>
+
+            <div class="ethos-card">
+                <span class="card-num">06.</span>
+                <h3>The Zero-Defect Standard</h3>
+                <p>Because we limit volume, we mandate perfection. Every deliverable meets the "Zero-Defect" standard. In a firm of this caliber, "good enough" is grounds for termination.</p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- LEADERSHIP -->
+    <section class="leadership-section">
+        <div class="leader-img">
+            <!-- Replace with your actual image file name -->
+            <img src="https://via.placeholder.com/400x500/333/fff?text=Srujan+Dhawale" alt="Srujan Dhawale">
+        </div>
+        <div class="leader-info">
+            <h2>Srujan Dhawale</h2>
+            <span class="leader-title">Founding Principal</span>
+            <div class="leader-bio">
+                <p>Srujan Dhawale is the Founder & CEO of Vivarium Strategy. A corporate turnaround specialist and McKinsey Forward alumnus, he operates on the frontier of "Systemic Design" and "Financial Architecture."</p>
+                <p>Prior to founding Vivarium, Srujan architected the operational optimization for a ₹800 Cr Division at Gabriel India (Anand Group), delivering leadership-certified strategic frameworks.</p>
+                <p>He is building an Empire, not a gig.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 10X GUARANTEE -->
+    <section class="roi-banner">
+        <h2>The 10X ROI Standard</h2>
+        <p>Every strategic proposal is engineered to deliver a minimum 10X Return on Investment relative to our fees. If we cannot demonstrate this path, we do not accept the engagement.</p>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>&copy; 2026 VIVARIUM STRATEGY. All Rights Reserved.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">A Registered MSME Enterprise.</p>
+    </footer>
+
+</body>
+</html>
