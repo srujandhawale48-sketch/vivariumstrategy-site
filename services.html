@@ -13,21 +13,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
     <style>
-        /* --- SAME CSS AS ABOUT PAGE FOR CONSISTENCY --- */
+        /* --- GLOBAL STYLES --- */
         :root {
             --bg-color: #121212;
             --card-bg: #1e1e1e;
             --text-main: #e0e0e0;
             --text-muted: #a0a0a0;
-            --accent: #ff6b00;
+            --accent: #ff6b00; /* International Orange */
         }
 
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; }
+        body { background-color: var(--bg-color); color: var(--text-main); font-family: 'Inter', sans-serif; line-height: 1.6; overflow-x: hidden; }
         h1, h2, h3 { font-family: 'Playfair Display', serif; color: white; }
         a { text-decoration: none; color: inherit; transition: 0.3s; }
 
-        /* NAVIGATION */
+        /* --- NAVIGATION BAR --- */
         nav {
             display: flex; justify-content: space-between; align-items: center;
             padding: 1.5rem 5%; background: rgba(18, 18, 18, 0.95);
@@ -39,21 +39,21 @@
         .nav-links a { font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
         .nav-links a:hover { color: var(--accent); }
 
-        /* HERO SECTION */
+        /* --- HERO SECTION --- */
         .page-header {
             padding: 8rem 5% 4rem; text-align: center; border-bottom: 1px solid #222;
         }
         .page-header h1 { font-size: 3.5rem; margin-bottom: 1rem; }
         .page-header p { font-size: 1.2rem; color: var(--text-muted); max-width: 700px; margin: 0 auto; }
 
-        /* SERVICES LAYOUT (Zig-Zag) */
+        /* --- SERVICES LAYOUT (Zig-Zag) --- */
         .service-block {
             display: flex;
             align-items: center;
             justify-content: space-between;
             padding: 6rem 10%;
             border-bottom: 1px solid #222;
-            gap: 4rem;
+            gap: 5rem;
         }
         
         /* Alternate direction for every second service */
@@ -81,25 +81,68 @@
             content: "■";
             color: var(--accent);
             font-size: 10px;
-            margin-right: 10px;
+            margin-right: 15px;
         }
 
+        /* --- THE TECH VISUALS (Grid + Animation) --- */
         .service-visual {
             flex: 1;
             height: 400px;
-            background: #1a1a1a;
+            background: #050505;
             border: 1px solid #333;
+            position: relative;
+            overflow: hidden; /* Keeps animation inside */
             display: flex;
             align-items: center;
             justify-content: center;
-            position: relative;
         }
-        
-        /* Pseudo-graphs for visuals (CSS Art) */
-        .visual-box { width: 60%; height: 60%; border: 2px solid var(--accent); position: relative; }
-        .visual-box::after { content: ""; position: absolute; top: -10px; right: -10px; width: 100%; height: 100%; border: 1px solid #444; z-index: -1; }
 
-        /* CTA SECTION */
+        /* The Grid Pattern */
+        .visual-grid {
+            width: 100%;
+            height: 100%;
+            background-image: 
+                linear-gradient(rgba(255, 107, 0, 0.05) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(255, 107, 0, 0.05) 1px, transparent 1px);
+            background-size: 40px 40px;
+            position: absolute;
+            top: 0; left: 0;
+        }
+
+        /* The Scanning Line Animation */
+        .scan-line {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+            box-shadow: 0 0 15px var(--accent);
+            animation: scan 4s infinite ease-in-out;
+            opacity: 0.8;
+        }
+
+        @keyframes scan {
+            0% { top: 0%; opacity: 0; }
+            10% { opacity: 1; }
+            90% { opacity: 1; }
+            100% { top: 100%; opacity: 0; }
+        }
+
+        /* Center Text inside Box */
+        .visual-label {
+            position: relative;
+            z-index: 2;
+            color: var(--accent);
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            border: 1px solid var(--accent);
+            padding: 10px 20px;
+            background: rgba(0,0,0,0.8);
+        }
+
+        /* --- CTA SECTION --- */
         .cta-section { text-align: center; padding: 6rem 5%; }
         .cta-section h2 { font-size: 2.5rem; margin-bottom: 2rem; }
         .btn {
@@ -109,6 +152,7 @@
         }
         .btn:hover { background: var(--accent); color: white; }
 
+        /* --- FOOTER --- */
         footer { text-align: center; padding: 3rem; border-top: 1px solid #333; color: var(--text-muted); font-size: 0.8rem; background: #0a0a0a; }
 
         @media (max-width: 768px) {
@@ -139,32 +183,34 @@
         <p>We do not provide generic advice. We deploy proprietary frameworks derived from rigorous operational audits and risk architecture.</p>
     </header>
 
-    <!-- SERVICE 1: OPERATIONAL BLUEPRINT -->
-    <section class="service-block" id="turnaround">
+    <!-- SERVICE 1 -->
+    <section class="service-block">
         <div class="service-text">
             <span class="service-num">01</span>
             <h2>The Operational Blueprint</h2>
-            <p>Designed for large-scale manufacturing and industrial environments. We use <strong>Constraint Analysis</strong> to identify the single bottleneck limiting total throughput.</p>
-            <p>We do not focus on "cost-cutting"; we focus on "throughput velocity." By optimizing the constraint, we convert inefficiency into pure margin.</p>
+            <p>Designed for large-scale manufacturing environments. We use <strong>Constraint Analysis</strong> to identify the single bottleneck limiting total throughput.</p>
+            <p>We convert inefficiency into pure margin by subordinated non-critical processes to the primary constraint.</p>
             
             <ul class="methodology-list">
                 <li>Constraint Identification & Subordination</li>
                 <li>Inventory Velocity Optimization</li>
-                <li>Shop-floor Throughput Accounting</li>
+                <li>Throughput Accounting (T > I > OE)</li>
             </ul>
         </div>
         <div class="service-visual">
-            <div class="visual-box"></div> <!-- Abstract Visual -->
+            <div class="visual-grid"></div>
+            <div class="scan-line"></div>
+            <div class="visual-label">YIELD : MAXIMIZED</div>
         </div>
     </section>
 
-    <!-- SERVICE 2: TRANSACTIONAL PROTOCOL -->
-    <section class="service-block" id="pe-advisory">
+    <!-- SERVICE 2 -->
+    <section class="service-block">
         <div class="service-text">
             <span class="service-num">02</span>
             <h2>The Transactional Protocol</h2>
             <p>A specialized mandate for <strong>Private Equity & Venture Capital</strong>. We provide buy-side due diligence that goes beyond the balance sheet.</p>
-            <p>Our focus is "Event-Driven Arbitrage"—identifying catalysts (Spinoffs, Demergers, Regulatory Shifts) that the market has mispriced.</p>
+            <p>Our focus is "Event-Driven Arbitrage"—identifying catalysts (Spinoffs, Demergers) that the market has mispriced.</p>
             
             <ul class="methodology-list">
                 <li>Commercial Due Diligence (CDD)</li>
@@ -173,17 +219,19 @@
             </ul>
         </div>
         <div class="service-visual">
-            <div class="visual-box" style="border-color: #fff;"></div>
+            <div class="visual-grid"></div>
+            <div class="scan-line" style="animation-duration: 3s;"></div>
+            <div class="visual-label">DILIGENCE : COMPLETE</div>
         </div>
     </section>
 
-    <!-- SERVICE 3: SURVIVAL MECHANISM -->
-    <section class="service-block" id="risk">
+    <!-- SERVICE 3 -->
+    <section class="service-block">
         <div class="service-text">
             <span class="service-num">03</span>
             <h2>The Survival Mechanism</h2>
             <p><strong>Corporate Turnaround</strong> for organizations facing existential threats. When the runway ends, standard rules do not apply.</p>
-            <p>We take temporary stewardship of the strategic direction to execute radical "Operational Purification"—cutting non-core assets to save the core entity.</p>
+            <p>We take temporary stewardship to execute radical "Operational Purification"—cutting non-core assets to save the core entity.</p>
             
             <ul class="methodology-list">
                 <li>Liquidity Crisis Management</li>
@@ -192,7 +240,9 @@
             </ul>
         </div>
         <div class="service-visual">
-            <div class="visual-box" style="border-color: #333; background: #222;"></div>
+            <div class="visual-grid"></div>
+            <div class="scan-line" style="animation-duration: 5s;"></div>
+            <div class="visual-label">SOLVENCY : SECURED</div>
         </div>
     </section>
 
