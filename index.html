@@ -44,16 +44,16 @@
 
         /* HERO SECTION (MODIFIED FOR VIDEO) */
         .hero {
-            position: relative; /* Added */
+            position: relative;
             min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             padding: 0 5%;
-            overflow: hidden; /* Added */
-            background: black; /* Added */
+            overflow: hidden;
+            background: black;
         }
-        
+
         /* Video Background Styling */
         .hero-video-bg {
             position: absolute;
@@ -150,7 +150,6 @@
 
     <!-- HERO SECTION WITH VIDEO BACKGROUND -->
     <section class="hero">
-        <!-- The Video Element -->
         <video autoplay muted playsinline id="hero-video-bg" class="hero-video-bg">
             <source src="vid1.mp4" type="video/mp4">
         </video>
@@ -186,12 +185,46 @@
         </div>
     </section>
 
-    <!-- ... rest of your code remains exactly same ... -->
+    <!-- SERVICES TEASER (FIXED & RESTORED) -->
+    <section class="section">
+        <div class="section-header">
+            <h2 class="section-title">CORE CAPABILITIES</h2>
+            <a href="services.html" class="btn-text">View Full Arsenal -></a>
+        </div>
+        <div class="services-teaser">
+            <div class="teaser-item">
+                <h3>01. Operational Blueprint</h3>
+                <p>Constraint Analysis for manufacturing throughput optimization.</p>
+            </div>
+            <div class="teaser-item">
+                <h3>02. Transactional Protocol</h3>
+                <p>Buy-side due diligence and valuation for Private Equity & VC.</p>
+            </div>
+            <div class="teaser-item">
+                <h3>03. Survival Mechanism</h3>
+                <p>Corporate Turnaround protocols for existential threat scenarios.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FIRM TEASER (FIXED & RESTORED) -->
+    <section class="firm-teaser">
+        <h2>ETHICAL SUPREMACY</h2>
+        <p>Vivarium Strategy rejects the "Mercenary Model." We are custodians of value creation, operating on a doctrine of Anti-Fragility and scarcity.</p>
+        <a href="about.html" class="btn">Read Our Ethos</a>
+    </section>
+
+    <!-- FOOTER (FIXED & RESTORED) -->
+    <footer>
+        <div class="logo" style="margin-bottom: 20px;">VIVARIUM <span>STRATEGY</span></div>
+        <p>&copy; 2026 VIVARIUM STRATEGY. All Rights Reserved.</p>
+        <p style="margin-top: 5px; opacity: 0.7;">Registered Office: Nashik | Operations: Pan-India</p>
+        <p style="margin-top: 5px; opacity: 0.7; font-size: 0.7rem;">A Registered MSME Enterprise.</p>
+    </footer>
 
     <!-- JAVASCRIPT FOR SEQUENTIAL VIDEO LOOP -->
     <script>
         const videoElement = document.getElementById('hero-video-bg');
-        // List your videos here (GitHub paths are relative)
         const videos = ['vid1.mp4', 'vid2.mp4', 'vid3.mp4']; 
         let currentVideoIndex = 0;
 
